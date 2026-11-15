@@ -12,21 +12,21 @@
     {
       "kind": "main",
       "tag": "com-custom-navtabs",
-      "url": "https://YOUR-HOST/navtabs/main.js",
+      "url": "https://github.com/nourmansourrr/panel/blob/4bf73b0847144156e4492e76b2c0d86ef5585ad5/main.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "builder",
       "tag": "com-custom-navtabs-builder",
-      "url": "https://YOUR-HOST/navtabs/builder.js",
+      "url": "https://github.com/nourmansourrr/panel/blob/4bf73b0847144156e4492e76b2c0d86ef5585ad5/builder.js",
       "integrity": "",
       "ignoreIntegrity": true
     },
     {
       "kind": "styling",
       "tag": "com-custom-navtabs-styling",
-      "url": "https://YOUR-HOST/navtabs/styling.js",
+      "url": "https://github.com/nourmansourrr/panel/blob/4bf73b0847144156e4492e76b2c0d86ef5585ad5/styling.js",
       "integrity": "",
       "ignoreIntegrity": true
     }
