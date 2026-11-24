@@ -1,0 +1,222 @@
+{
+  "id": "com.custom.compositiondonut",
+  "version": "1.0.1",
+  "name": "Composition Donut",
+  "description": "Donut showing each measure as a share of the sum of all measures",
+  "newInstancePrefix": "CompDonut",
+  "vendor": "Custom",
+  "eula": "",
+  "license": "",
+  "icon": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-custom-compositiondonut",
+      "url": "https://nourmansourrr.github.io/panel/donut/main.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    },
+    {
+      "kind": "styling",
+      "tag": "com-custom-compositiondonut-styling",
+      "url": "https://nourmansourrr.github.io/panel/donut/styling.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "default": 480
+    },
+    "height": {
+      "type": "integer",
+      "default": 320
+    },
+    "title": {
+      "type": "string",
+      "default": "ASSET COMPOSITION"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Current vs Non-Current Assets"
+    },
+    "label1": {
+      "type": "string",
+      "default": ""
+    },
+    "label2": {
+      "type": "string",
+      "default": ""
+    },
+    "label3": {
+      "type": "string",
+      "default": ""
+    },
+    "label4": {
+      "type": "string",
+      "default": ""
+    },
+    "label5": {
+      "type": "string",
+      "default": ""
+    },
+    "label6": {
+      "type": "string",
+      "default": ""
+    },
+    "manualJson": {
+      "type": "string",
+      "default": ""
+    },
+    "percentDecimals": {
+      "type": "integer",
+      "default": 1
+    },
+    "showPercentInLegend": {
+      "type": "boolean",
+      "default": true
+    },
+    "showValueInLegend": {
+      "type": "boolean",
+      "default": false
+    },
+    "showCenterTotal": {
+      "type": "boolean",
+      "default": false
+    },
+    "centerLabel": {
+      "type": "string",
+      "default": "Total"
+    },
+    "legendPosition": {
+      "type": "string",
+      "default": "right"
+    },
+    "color1": {
+      "type": "string",
+      "default": "#2b5a8c"
+    },
+    "color2": {
+      "type": "string",
+      "default": "#1c2b40"
+    },
+    "color3": {
+      "type": "string",
+      "default": "#6fa8dc"
+    },
+    "color4": {
+      "type": "string",
+      "default": "#9fb4c9"
+    },
+    "color5": {
+      "type": "string",
+      "default": "#c9d6e3"
+    },
+    "color6": {
+      "type": "string",
+      "default": "#e6edf4"
+    },
+    "ringThickness": {
+      "type": "integer",
+      "default": 37
+    },
+    "sliceGap": {
+      "type": "integer",
+      "default": 0
+    },
+    "fontFamily": {
+      "type": "string",
+      "default": "Inter, 'Segoe UI', Arial, sans-serif"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "#ffffff"
+    },
+    "borderColor": {
+      "type": "string",
+      "default": "#e5e9ef"
+    },
+    "borderRadius": {
+      "type": "integer",
+      "default": 12
+    },
+    "padding": {
+      "type": "integer",
+      "default": 20
+    },
+    "titleColor": {
+      "type": "string",
+      "default": "#1c2b40"
+    },
+    "titleFontSize": {
+      "type": "integer",
+      "default": 20
+    },
+    "titleFontWeight": {
+      "type": "integer",
+      "default": 700
+    },
+    "titleLetterSpacing": {
+      "type": "integer",
+      "default": 1
+    },
+    "subtitleColor": {
+      "type": "string",
+      "default": "#64748b"
+    },
+    "subtitleFontSize": {
+      "type": "integer",
+      "default": 14
+    },
+    "legendColor": {
+      "type": "string",
+      "default": "#5b6b7f"
+    },
+    "legendFontSize": {
+      "type": "integer",
+      "default": 15
+    },
+    "legendMarkerSize": {
+      "type": "integer",
+      "default": 20
+    },
+    "centerColor": {
+      "type": "string",
+      "default": "#1c2b40"
+    },
+    "centerFontSize": {
+      "type": "integer",
+      "default": 22
+    }
+  },
+  "methods": {
+    "setManualData": {
+      "description": "Fallback: set slices from JSON like [{\"label\":\"A\",\"value\":10}]",
+      "parameters": [
+        {
+          "name": "json",
+          "type": "string",
+          "description": "JSON array"
+        }
+      ],
+      "body": "this.manualJson = json;"
+    }
+  },
+  "dataBindings": {
+    "dataBinding": {
+      "feeds": [
+        {
+          "id": "measures",
+          "description": "Measures",
+          "type": "mainStructureMember"
+        },
+        {
+          "id": "dimensions",
+          "description": "Dimension (optional)",
+          "type": "dimension"
+        }
+      ]
+    }
+  }
+}
